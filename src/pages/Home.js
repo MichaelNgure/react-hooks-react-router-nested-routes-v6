@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Outlet } from "react-router-dom";
 import UserCard from "../components/UserCard";
 import NavBar from "../components/NavBar";
 
@@ -18,11 +19,9 @@ function Home() {
 
   return (
     <>
-      <header>
-        <NavBar />
-      </header>
       <main>
         <h1>Home!</h1>
+        <Outlet/>
         {userList}
       </main>
     </>
